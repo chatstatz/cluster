@@ -1,23 +1,32 @@
 # cluster
 
-For managing the chatstatz Kubernetes cluster.
+For managing both local and cloud chatstatz Kubernetes clusters.
 
-## Prerequisites
+## Development
 
-- Minikube ([Install Guide](https://kubernetes.io/docs/tasks/tools/install-minikube/))
-- Kubectl ([Install Guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/))
+Before getting started locally, make sure the following dependencies are installed:
 
-## Minikube
+- Docker v19.03 or higher ([Install Guide](https://docs.docker.com/install/))
+- Minikube v1.7.2 or higher ([Install Guide](https://kubernetes.io/docs/tasks/tools/install-minikube/))
+- Kubectl v1.17.3 or higher ([Install Guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/))
 
-Run the following commands to start and configure a local Kubernetes cluster on your machine.
+### Getting up and running
+
+Run the following commands to start a local Kubernetes cluster on your machine:
 
 ```bash
-./scripts/setup-local-cluster.sh
+# Clone the repo
+git clone git@github.com:chatstatz/cluster.git
+cd cluster
+
+# Start the local Minikube cluster
+./scripts/local/deploy-cluster.sh
 ```
 
-## Kaos (GKE)
+### K8s dashboard (optional)
 
-## Production (GKE)
+If you would like to visualize your local cluster with the K8s web dashboard,
+you can follow [these instructions](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/).
 
 ## License
 
